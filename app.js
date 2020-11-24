@@ -75,6 +75,7 @@ app.post('/send', (req, res) => {
     });
 
 //port number on which server runs
-app.listen(5000, (req, res)=>{
+const port = 5000;
+app.listen(port, (req, res)=>{
     console.log("Server has started...");
 })
