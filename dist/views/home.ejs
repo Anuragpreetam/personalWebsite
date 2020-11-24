@@ -1,0 +1,150 @@
+<%- include("partials/header") %>
+
+
+<div class="container" >
+    <div class="jumbotron" id="aboutme">
+        <h1>About Me </h1>
+        <p>Well, I'm an Engineer turning into an <b>MBA</b> now. I was so much into software Engineering but 
+            I wanted to learn how the business side of things work and also how to manage a product development and things like that so I opted for an MBA
+        </p>  
+    </div>
+
+    <div class="jumbotron" id="education">
+        <h1>Education </h1>
+        <p>        
+            I Graduated B.Tech in Computer Science and Engineering with <b>70%</b> from JNTUH in 2018.
+            Now doing an MBA from GuruNanak Business School in Hyderabad and I should be graduating in 2022 hopefully.
+        </p>  
+    </div>
+
+    <div class="jumbotron" id="projects">
+        <h1>Projects </h1>
+        <h2>SecretBook</h2>
+        <p>
+            An android application where you can write anything you want just like a diary but this is a digital one,
+            we provided security to it by adding authentication and encrypting the data. So you're password works as the key for encryption and it decrypts every single time
+            you open the application and type in you're password.
+        </p>
+        
+        <h2>Fire Detection</h2>
+        <p>
+            In today's world we see many news articles about fire accidents as the buildings do not have 
+            proper fire detecting systems in place and even though some buildings have sensors but still 
+            we see accidents because the sensors work in such a way that only if smoke reaches them only then they
+            alert us, so we wanted to reduce the delay in notifying so we developed this desktop application
+            that uses computer vision to detect fire and it is fast and accurate.  
+        </p>
+
+        <h2>ToDo List</h2>
+        <p>I made this project as a part of learning JavaScript.
+            A simple ToDo list styled using bootstrap. 
+            Everything happens in the client side.
+        </p>
+
+        <h2>Color Game</h2>
+        <p> 
+            This too was made as a part of learning JavaScript but it was slightly more 
+            complex than ToDo list. 
+            You’re presented with a 2*3 grid containing colors and on the top you’re presented with rgb code, so you need to pick the right color according to the rgb code.
+        </p>
+
+        <h2>Camp Grounds</h2>
+        <p>
+            A fullStack application made using MEN stack (Mongo, Express, NodeJs). 
+            If you’re looking for a  nice place to camp for the weekend then it’s the
+            right app for you. 
+            Built authentication using PassportJs and there is also a comment section for every
+            campground which displays the comment as well as the name of the user 
+            that posted that comment.
+        </p>
+
+        <h2>Simple Search</h2>
+        <p>
+            A search app to search any stuff related to movies stored inside the DataBase.
+            You can also edit and delete a record from the DataBase.
+        </p>
+
+        <h2> Student Management System</h2>
+        <p>
+           A fullStack application made using MEN stack (Mongo, Express, NodeJs). It has both Authentication and Authorisation built into it. For Authorisation of Student/Teacher we made use of OAuth with PassportJs (Added SignIn with google and SignIn with Github). 
+           For Authorisation of admin we used JWT(Json Web Tokens).
+           This web app can be used to manage all the Student Details especially his/her grades. 
+           For Authorisation of Student/Teacher we used RoleBasedAccessControl. 
+        </p>
+    </div>
+
+
+    <div class="jumbotron" id="contact">
+        <h1>Contact Me</h1>
+        <p><%= msg%></p>
+        <form method="POST" action="send" id="myform">
+            <div class="form-group row"> 
+                
+                <label for="name" class="col-sm-2 col-form-label col-form-label-sm">Name</label>
+                <div class="col-sm-10">
+                    <input name="name" type="text" class="form-control form-control-sm" id="namefield" placeholder="Name">
+                </div>
+            </div> 
+
+            <div class="form-group row">   
+                <label for="companyfield" class="col-sm-2 col-form-label col-form-label-sm">Company</label>
+                <div class="col-sm-10">
+                    <input name="company" type="text" class="form-control form-control-sm" id="companyfield" placeholder="Company">
+                </div>
+            </div>
+
+            <div class="form-group row"> 
+                <label for="emailfield" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+                <div class="col-sm-10">
+                    <input name="email" type="email" class="form-control form-control-sm" id="emailfield" placeholder="Email">
+                </div>
+            </div>
+
+            <div class="form-group row"> 
+                <label for="numberfield" class="col-sm-2 col-form-label col-form-label-sm">Phone/Mobile</label>
+                <div class="col-sm-10">
+                    <input name="phone" type="number" class="form-control form-control-sm" id="numberfield" placeholder="Phone/Mobile">
+                </div>
+            </div>
+
+            <div class="form-group row"> 
+                <label for="messagefield" class="col-sm-2 col-form-label col-form-label-sm">Message</label>
+                <div class="col-sm-10">
+                    <textarea name="message" rows="5" class="form-control form-control-sm" id="messagefield" placeholder="Message"></textarea>
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                  <button id= "submitbtn" onclick="myFunction()" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+  
+        </form> 
+    </div>
+
+    <div class="jumbotron" id="social">
+        <h1>Social</h1>
+        
+        <ul id="ulstyle">
+            <li><h2><a href="https://twitter.com/AnuragPreetam" target="_blank" class="fa fa-twitter-square"></a></h2></li>
+            <li><h2><a href="https://github.com/Anuragpreetam" target="_blank" class="fa fa-github-square"></a></h2></li>
+            <li><h2><a href="#" target="_blank" class="fa fa-linkedin-square"></a></h2></li>
+            <li><h2><a href="https://www.instagram.com/anuragponnada/" target="_blank" class="fa fa-instagram"></a></h2></li>
+        </ul>
+    </div>
+    
+</div>
+<script>
+    function myFunction() {
+  document.getElementById("myForm").reset();
+}
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
+
+
+<%- include("partials/footer") %>
+
